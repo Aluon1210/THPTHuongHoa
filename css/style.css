@@ -287,3 +287,15 @@ footer {
     font-variant: small-caps;
     text-align: center ;
  }
+
+ .chat-box {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    width: 300px;
+    background: #f9f9f9;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    transition: all 0.3s;
+ }
