@@ -196,15 +196,14 @@ h3 {
 .bot {
     margin-left: 100px;
     width: 300px;
-    background-color: transparent;
+   
 }
 
 .bot h3 {
     padding-bottom: 10px;
-    color: violet;
+    color: red;
     text-align: center;
     background-color: transparent;
-
 }
 
 /* khung hien thi */
@@ -247,7 +246,7 @@ article h2 {
 
 footer {
     width: auto;
-    height: 145px; /* Adjusted height to be shorter */
+    height: 145px; 
     clear: both;
     background: blue;
     color: white;
@@ -288,6 +287,23 @@ footer {
     text-align: center ;
  }
 
+ .fb-comments-container {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    padding: 20px; /* Tạo khoảng cách */
+    margin: 0 auto; /* Căn giữa theo chiều ngang */
+    max-width: 100%; /* Giới hạn chiều rộng tối đa */
+    
+}
+
+.fb-comments {
+    width: 100%; /* Đảm bảo phản hồi co giãn linh hoạt */
+}
+
+
+
+
+
  .chat-box {
     position: fixed;
     bottom: 0;
@@ -299,3 +315,5 @@ footer {
     display: none;
     transition: all 0.3s;
  }
+
+
