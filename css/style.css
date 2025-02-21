@@ -6,6 +6,8 @@ body {
     background-color: rgb(235, 225, 225);
     font-family: 'Times New Roman', Times, serif;
     color: black;
+    margin-left: 100px;
+    margin-right: 100px;
 
 }
 .head1 {
@@ -18,8 +20,6 @@ body {
     border-style: solid;
     padding: 0px 0px 0px ;
     margin: 0px;
-    margin-left: 100px;
-    margin-right: 100PX;
 
 
 }
@@ -32,7 +32,6 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 0 100px;
-    margin: 0 100px; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -157,18 +156,6 @@ div marquee {
     margin-left: 100px;
     margin-right: 100px;
 }
-aside {
-    float: left;
-    width: 300px;
-    border-left: 1px soid gray;
-    margin-left: 100px;
-
-}
-
-aside ul li {
-    list-style: none;
-    text-decoration: none;
-}
 h3 {
     font-size: 20px;
     padding: 10px 15px;
@@ -176,29 +163,11 @@ h3 {
     color: white;
     text-shadow: 2px 2px 5px red;
 }
-.MeNuDoc ul li {
-    padding: 10px;
-    background-color: white;
-    border-top: 2px solid gray;
-}
-.MeNuDoc ul li a {
-    text-transform: capitalize;
-    text-decoration: none;
-    font-size: 25px;
-    left: 40px;
-}
-
-
-.MeNuDo ul li:hover {
-    background: red;
-}
-
 .bot {
     margin-left: 100px;
     width: 300px;
    
 }
-
 .bot h3 {
     padding-bottom: 10px;
     color: red;
@@ -206,17 +175,64 @@ h3 {
     background-color: transparent;
 }
 
+/* menu doc */
+
+aside {
+    float: left;
+    width: 20%;                    /* chỉnh sữa độ rộng 8 */
+    border-top: 1px soid gray;
+  
+
+}
+
+aside ul li {
+    list-style: none;
+    text-decoration: none;
+}
+
+.MeNuDoc ul li {
+    padding: 15px;                               /*30px */
+    background-color: white;
+    border-top: 2px solid gray;
+}
+.MeNuDoc ul li a {
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 25px;
+    left: 60px;                               
+}
+
+
+.MeNuDoc ul li:hover {
+    background: rgb(201, 192, 192);
+    color: violet;
+}
+
+
+
+.bot h3 {
+    padding-bottom: 10px;        
+    color: red;
+    text-align: center;
+    background-color: transparent;
+    font-variant: small-caps;
+}
+
+.video-short {
+    font-size: 27px;
+    padding-top: 5PX;
+    color: black;
+    padding-inline: 10px;
+}
 
 
 /* khung hien thi */
 article {
-    float: left;
-    width: 64%;
+    float: left;                    
+    width: calc(78%);        /* 80% */
+    padding-left: 2%;
     height: 1200px;
-    margin-left: 35px;
-    margin-right: 100px;
-    margin-bottom: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, );
+        
 }
 
 .box-1 { 
@@ -242,7 +258,8 @@ article .map {
 article h2 {
     text-align: center;
     font-size: 30px;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-variant: small-caps;
     color: rgb(rgb(119, 0, 255), green, blue);
 }
@@ -253,14 +270,14 @@ article h2 {
     border-radius: 8px;
 }
 
+
+/* chân trang Web*/
 footer {
     width: auto;
     height: 145px; 
     clear: both;
     background: blue;
     color: white;
-    margin-left: 100px;
-    margin-right: 100px;
     margin-bottom: 0px;
 }
 .ft1 {
@@ -296,11 +313,10 @@ footer {
     text-align: center ;
  }
 
-
-
-
+/* Phần bình luận */
 
 .fb-comments-container {
+    clear: both; /* Xóa float */
     display: flex;
     justify-content: center; /* Căn giữa phần bình luận */
     max-width: 100%; /* Giới hạn chiều rộng tối đa */
@@ -309,10 +325,9 @@ footer {
 
 .fb-comments {
     width: 100%; /* Bình luận co giãn theo phần chứa */
-    max-height: 200px; /* Giới hạn chiều cao */
+    max-height:300px; /* Giới hạn chiều cao */
     overflow-y: auto; /* Hiển thị thanh cuộn khi nội dung vượt quá */
 }
-
 
 
 
