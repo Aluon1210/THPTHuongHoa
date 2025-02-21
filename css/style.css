@@ -206,6 +206,8 @@ h3 {
     background-color: transparent;
 }
 
+
+
 /* khung hien thi */
 article {
     float: left;
@@ -214,26 +216,33 @@ article {
     margin-left: 35px;
     margin-right: 100px;
     margin-bottom: 10px;
-    border-right: 1px solid ;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, );
 }
 
 .box-1 { 
     max-width: auto;
-    height: 60%;
+    height: 55%;
     margin: auto;
     background-color: #fff;
-    border-radius: 10px;
     padding: 20px;
     
 }
+
+
+
+
+
+/* google map */ 
 article .map {
     height: 35%;
+    padding-bottom: 0px;
+    bottom: 0px;
 
 }
 article h2 {
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
+    padding: 10px;
     font-variant: small-caps;
     color: rgb(rgb(119, 0, 255), green, blue);
 }
@@ -287,17 +296,21 @@ footer {
     text-align: center ;
  }
 
- .fb-comments-container {
+
+
+
+
+.fb-comments-container {
     display: flex;
-    justify-content: center; /* Căn giữa theo chiều ngang */
-    padding: 20px; /* Tạo khoảng cách */
-    margin: 0 auto; /* Căn giữa theo chiều ngang */
+    justify-content: center; /* Căn giữa phần bình luận */
     max-width: 100%; /* Giới hạn chiều rộng tối đa */
-    
+    padding: 10px;
 }
 
 .fb-comments {
-    width: 100%; /* Đảm bảo phản hồi co giãn linh hoạt */
+    width: 100%; /* Bình luận co giãn theo phần chứa */
+    max-height: 200px; /* Giới hạn chiều cao */
+    overflow-y: auto; /* Hiển thị thanh cuộn khi nội dung vượt quá */
 }
 
 
@@ -305,7 +318,7 @@ footer {
 
 
  .chat-box {
-    position: fixed;
+    position: relative;
     bottom: 0;
     right: 20px;
     width: 300px;
