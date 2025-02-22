@@ -326,8 +326,11 @@ footer {
 .fb-comments-container {
     clear: both;
     width: 100%;
-    height: 500px;
-    background-color: gray;
+    display: flex;
+    padding: 40px;
+    justify-content: center; 
+    height: 400px;
+    background-color: transparent;
 }
 
 .fb-comments {
