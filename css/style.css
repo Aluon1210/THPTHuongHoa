@@ -269,10 +269,10 @@ article h2 {
     border: none;
     border-radius: 8px;
 }
-
- hr {
-    border: 2px soid brown;
+ hr{
+    border: 3px solid rgb(156, 35, 35);
  }
+
 /* chân trang Web*/
 footer {
     width: 100%;
@@ -329,22 +329,21 @@ footer {
     clear: both;
     width: 100%;
     display: flex;
-    padding: 40px;
     justify-content: center; 
     height: 400px;
+    padding: 40px;
     background-color: transparent;
 }
 
 .fb-comments {
-    width: 130%; /* Bình luận co giãn theo phần chứa */
+    width: 100%; /* Bình luận co giãn theo phần chứa */
     max-height:300px; /* Giới hạn chiều cao */
-    overflow-y: scroll; /* Giữ chức năng cuộn dọc */
-
-    -ms-overflow-style: none; /* Ẩn thanh cuộn trên IE và Edge */
+    overflow-y: auto; /* Hiển thị thanh cuộn khi nội dung vượt quá */
     left: 0px;
     right: 0px;
     padding: auto;
 }
+
 
 
 
