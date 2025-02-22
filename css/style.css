@@ -336,12 +336,17 @@ footer {
 .fb-comments {
     width: 130%; /* Bình luận co giãn theo phần chứa */
     max-height:300px; /* Giới hạn chiều cao */
-    overflow: scroll;
+    overflow-y: scroll; /* Giữ chức năng cuộn dọc */
+    scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
+    -ms-overflow-style: none; /* Ẩn thanh cuộn trên IE và Edge */
     left: 0px;
     right: 0px;
     padding: auto;
 }
 
+.fb-comments::-webkit-scrollbar {
+    display: none;
+  }
 
 
 
