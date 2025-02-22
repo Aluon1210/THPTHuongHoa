@@ -75,7 +75,7 @@ nav {
     display: none; /* Ẩn menu con mặc định */
     opacity: 0;
     transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.1s ease, transform 0.1s ease;
     z-index: 999;
 }
 
@@ -89,11 +89,10 @@ nav {
 /* ===== ITEM TRONG MENU CON ===== */
 .menu-ngang ul li {
     list-style: none;
-    font-variant: small-caps;
     padding: 10px;
     border-bottom: 1px solid #ddd;
     background: white;
-    transition: background 0.3s;
+    transition: background 0.1s;
 }
 
 .menu-ngang ul li:last-child {
@@ -108,9 +107,12 @@ nav {
     display: block;
 }
 
-.menu-ngang ul li a:hover  {
-    color: blue;
+.menu-ngang ul li a:hover , .menu-ngang ul li:hover{
+    background-color: blue;
+    color: white;
     text-decoration: underline;
+
+
 }
 
 /* ===== THANH TÌM KIẾM ===== */
@@ -276,48 +278,52 @@ article h2 {
 /* chân trang Web*/
 footer {
     width: 100%;
-    height: 145px; 
+    height: 220px; 
     clear: both;
     background: blue;
     color: white;
     margin-bottom: 0px;
+    border-top: 2px solid  black
 }
-.ft1 {
+.ft1 , .ft2 {
     float: left;
-    width: 46%;
+    width: 42%;
     padding-left: 4%;
+    padding-right: 4%;
     padding-top: 10px;
-
- }
-  footer h3 {
-    padding-top: 10px;
+    line-height: 45px;
     font-size: 20px;
-}
-.ft2 {
-    float: left;
-    padding-left: 0px;
-    width: 46%;
-    margin-left: 30px;
-    padding-top: 1%;
-    padding-bottom: 2%;
-}
- .ft3 {
+
+  }
+
+
+.ft3 {
     width: 100%;
-    height: 30px;
+    height: 35px;
     clear: both;
     background: aqua;
+
+    color: black;
+    font-size: 20px;
+    text-align: center ;
+    border-top: 2px;
  }
 
- .ft3 {
-    color: black;
-    font-size: 15px;
-    font-variant: small-caps;
-    text-align: center ;
+
+ footer hr {
+    border: 1px solid white;
  }
 
 /* Phần bình luận */
 
-
+.hot {
+    text-decoration: none;
+    color: white;
+}
+ .hot:hover {
+    color: red;
+    text-decoration: underline;
+ }
 
 .fb-comments-container {
     clear: both;
@@ -338,7 +344,6 @@ footer {
     right: 0px;
     padding: auto;
   }
-
 
 
 
