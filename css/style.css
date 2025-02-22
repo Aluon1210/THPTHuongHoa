@@ -334,7 +334,7 @@ footer {
 }
 
 .fb-comments {
-    width: 100%; /* Bình luận co giãn theo phần chứa */
+    width: 50%; /* Bình luận co giãn theo phần chứa */
     max-height:300px; /* Giới hạn chiều cao */
     overflow-y: auto; /* Hiển thị thanh cuộn khi nội dung vượt quá */
     left: 0px;
