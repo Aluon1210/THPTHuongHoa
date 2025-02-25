@@ -51,9 +51,8 @@ nav {
     color: white;
     font-size: 18px;
     font-weight: bold;
-    font-family: Arial, sans-serif;
-    text-transform: uppercase;
-    transition: color 0.3s, transform 0.2s;
+    font-family: 'Times New Roman', Times, serif;
+     transition: color 0.3s, transform 0.2s;
 }
 
 .menu-ngang > li:hover > a {
@@ -102,7 +101,6 @@ nav {
 .menu-ngang ul li a {
     color: black;
     font-size: 20px;
-    font-variant: small-caps;
     text-decoration: none;
     display: block;
 }
@@ -325,25 +323,33 @@ footer {
     text-decoration: underline;
  }
 
-.fb-comments-container {
-    clear: both;
-    width: calc(100% + 80px);
+ .fb-comments-container {
     display: flex;
-    justify-content: center; 
+    justify-content: space-between; /* Cách đều hai phần */
+    align-items: flex-start;
+    background-color: green;
+    width: 90%;
     height: 400px;
-    padding: 40px;
-    
-    background-color: transparent;
- }
+    padding: 5%;
+    gap: 10%; /* Tạo khoảng cách giữa lịch và bình luận */
+}
 
 .fb-comments {
-    width: 100%; /* Bình luận co giãn theo phần chứa */
-    max-height:100%; /* Giới hạn chiều cao */
-    overflow-y: auto; /* Hiển thị thanh cuộn khi nội dung vượt quá */
+    width: 50%; /* Bình luận chiếm 50% */
+    position: absolute;
     left: 0px;
-    right: 0px;
-    padding: auto;
-  }
+    padding-left: 2%;
+    max-height: 100%;
+    background-color: gray;
+    overflow-y: auto;
+}
+
+.calendar {
+    width: 50%; /* Lịch chiếm 45%, nhỏ hơn để tránh tràn */
+    height: 100%; /* Giảm chiều cao để phù hợp */
+    border: none;
+    background-color: gray;
+}
 
 
 
