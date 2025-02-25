@@ -327,7 +327,7 @@ footer {
     display: flex;
     justify-content: space-between; /* Cách đều hai phần */
     align-items: flex-start;
-    background-color: green;
+
     width: 90%;
     height: 400px;
     padding: 5%;
@@ -340,7 +340,7 @@ footer {
     left: 0px;
     padding-left: 2%;
     max-height: 100%;
-    background-color: gray;
+    
     overflow-y: auto;
 }
 
@@ -348,7 +348,7 @@ footer {
     width: 50%; /* Lịch chiếm 45%, nhỏ hơn để tránh tràn */
     height: 100%; /* Giảm chiều cao để phù hợp */
     border: none;
-    background-color: gray;
+
 }
 
 
