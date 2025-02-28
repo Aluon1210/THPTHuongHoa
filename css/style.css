@@ -208,7 +208,10 @@ aside ul li {
     color: violet;
 }
 
-
+.box1 ul li a:hover {
+    color: red;
+    text-decoration: underline;
+}
 
 .bot h3 {
     padding-bottom: 10px;        
