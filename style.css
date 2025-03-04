@@ -50,6 +50,7 @@ header {
     text-align: center;
     background: url('banner.jpg') no-repeat center center/cover;
     color: white;
+    object-fit: cover;
     
 
 }
