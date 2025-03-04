@@ -9,7 +9,7 @@
 <body>
 
     <!-- Thanh Menu -->
-
+   
 
     <!-- Tiêu đề -->
     <header>
@@ -19,18 +19,19 @@
         <ul>
             <li><a href="#index">Trang chủ</a></li>
             <li><a href="#about">Giới thiệu</a></li>
+            <li><a href="#places">Địa điểm</a></li>
             <li><a href="#contact">Liên hệ</a></li>
         </ul>
     </nav>
 
     <!-- Phần giới thiệu -->
-    <section id="about">
+    <div id="about">
         <h2>Giới thiệu Đà Nẵng</h2>
         <p>Đà Nẵng là một trong những thành phố đáng sống nhất Việt Nam, nổi bật với bãi biển tuyệt đẹp, nền văn hóa phong phú và con người thân thiện. Thành phố này không chỉ là trung tâm kinh tế quan trọng mà còn là điểm đến du lịch hấp dẫn với nhiều danh lam thắng cảnh nổi tiếng.</p>
-    </section>
+    </div>
 
     <!-- Danh sách địa điểm du lịch -->
-    <section id="places">
+    <div id="places">
         <h2>Địa điểm du lịch nổi bật</h2>
         <ul>
             <li><strong>Cầu Rồng</strong> – Cây cầu có thiết kế độc đáo với khả năng phun lửa và nước.</li>
@@ -38,17 +39,40 @@
             <li><strong>Biển Mỹ Khê</strong> – Một trong những bãi biển đẹp nhất hành tinh.</li>
             <li><strong>Ngũ Hành Sơn</strong> – Kỳ quan thiên nhiên với những hang động và chùa chiền cổ kính.</li>
         </ul>
-        <img src="cầu rồng.jpg" alt="Cầu Rồng">
-        <img src="bà nà hill.jpg" alt="Bà Nà Hills">
-    </section>
+        
+        <!-- Thư viện ảnh đẹp hơn -->
+        <div class="image-gallery">
+            <div class="brg-image">
+                <img src="cầu rồng.jpg" alt="Cầu Rồng">
+                <h4>Cầu Rồng - Biểu tượng Đà Nẵng</h4>
+            </div>
+
+            <div class="brg-image">
+                <img src="bà nà hill.jpg" alt="Bà Nà Hills">
+                <h4>Bà Nà Hills - Thiên đường trên núi</h4>
+            </div>
+
+            <div class="brg-image">
+                <img src="ngũ hành sơn.jpg" alt="Ngũ Hành Sơn">
+                <h4>Ngũ Hành Sơn - Di tích lịch sử và tâm linh</h4>
+            </div>
+
+            <div class="brg-image2">
+                <img src="mỹ khê.jpg" alt="Biển Mỹ Khê">
+                <h4>Biển Mỹ Khê - Một trong những bãi biển đẹp nhất thế giới</h4>
+            </div>
+     
+        </div>
+        
+    </div>
 
     <!-- Thông tin liên hệ -->
-    <section id="contact">
-        <h2>Liên hệ</h2>
+    <footer id="contact">
+        <h2><u>Liên hệ</u></h2>
         <p>Địa chỉ: 123 Đường Trần Phú, Đà Nẵng</p>
         <p>Email: info@danangtravel.com</p>
         <p>Điện thoại: 0123 456 789</p>
-    </section>
+    </footer>
 
 </body>
 </html>
