@@ -100,6 +100,15 @@ ul li::before {
     font-weight: bold;
 }
 
+#about h2 {
+    text-align: center;
+}
+#about p {
+    font-size: 20px;
+    line-height: 40px;
+    text-indent: 40px;
+}
+
 div:hover {
     transform: translateY(-5px);
 }
@@ -120,6 +129,7 @@ div:hover {
 
 .brg-image, .brg-image2 {
     width: 100%;
+    height: 310px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
@@ -127,10 +137,11 @@ div:hover {
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }
-.brg-image2 {
-    width: 320px;
+.brg-image {
+    padding: 20px;
 }
 .brg-image2 {
+    padding: 20px;
     left: 0px;
     right: 0PX;
     margin: AUTO;
@@ -141,33 +152,28 @@ div:hover {
 
 .brg-image img, .brg-image2 img {
     width: 100%;
-    height: 200px;
+    height: 190px;
     object-fit: cover;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px ;
 }
 
-.brg-image h4 {
+.brg-image h4, .brg-image2 h4 {
     padding: 10px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
-    line-height: 24px;
+    line-height: 40px;
 }
 
-.brg-image:hover {
+.brg-image:hover , .brg-image2:hover {
     transform: scale(1.05);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .image-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-}
+
 
 
 .image-gallery img:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 /* Thông tin liên hệ */
