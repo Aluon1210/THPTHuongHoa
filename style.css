@@ -1,201 +1,71 @@
-/* Định dạng chung */
-* {
+/* Thiết lập nền gradient */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: #f5f5f5;
-    color: #333;
-}
-
-
-/* Thanh giới thiệu thành phố Đà Nẵng*/
-.tittle{
-    background-color: #0077cc;
-    margin: 0px;
-    width: 100%;
-    height: 60px;
-    border-radius: 0px;
-}
-.tittle  h2 {
-    line-height: 12px;
-    font-size: 30px;
-    padding: auto;
+    font-family: 'Arial', sans-serif;
     text-align: center;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+    color: white;
+    overflow: hidden;
 }
 
-
-
+/* Container chính */
+.container {
+    position: relative;
+    z-index: 2;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    margin-top: 20%;
+}
 
 /* Tiêu đề */
-header {
-    height: 400px;
-    text-align: center;
-    background: url('image/banner1.jpg') no-repeat center center/cover;
-    color: white;
-    background-size: cover;
+h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8);
+    animation: glow 2s infinite alternate;
 }
 
-/* Thanh menu cố định */
-nav {
+/* Hiệu ứng phát sáng */
+@keyframes glow {
+    from { text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8); }
+    to { text-shadow: 0px 0px 20px rgba(255, 255, 255, 1); }
+}
+
+/* Lời chúc xuất hiện dần */
+.message {
+    font-size: 1.5em;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: scale(0.8);
+}
+
+/* Nút nhấn */
+button {
+    background: #ff4081;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(255, 64, 129, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hiệu ứng hover */
+button:hover {
+    background: #d81b60;
+    transform: scale(1.1);
+}
+
+/* Pháo hoa */
+canvas {
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    background-color: #0077cc;
-    padding: 15px 0;
-    text-align: center;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ffdd57;
-    text-decoration: underline;
-}
-
-
-/* Nội dung chính */
-div {
-    width: 80%;
-    margin: 40px auto;
-    padding: 40px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-ul li 
-{
-    list-style-type: none;
-    font-size: 20px;
-    line-height: 35px;
-    position: relative;
-    padding-left: 20px;
-}
-
-ul li::before {
-    content: '→ ';
-    position: absolute;
-    left: 0;
-    color: #0077cc;
-    font-weight: bold;
-}
-
-#about h2 {
-    text-align: center;
-}
-#about p {
-    font-size: 20px;
-    line-height: 40px;
-    text-indent: 40px;
-}
-
-div:hover {
-    transform: translateY(-5px);
-}
-
-/* Hiển thị ảnh đẹp hơn */
-.image-gallery {
-    padding-top: 0px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    justify-items: center;
-    margin: 0px;
-    padding: 0px;
-    box-shadow: 0 4px 8px transparent;
-
-}
-
-.brg-image, .brg-image2 {
-    width: 100%;
-    height: 310px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-}
-.brg-image {
-    padding: 20px;
-}
-.brg-image2 {
-    padding: 20px;
-    left: 0px;
-    right: 0PX;
-    margin: AUTO;
-    width: 1130px;
-}
-
-
-
-.brg-image img, .brg-image2 img {
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-    border-radius: 10px ;
-}
-
-.brg-image h4, .brg-image2 h4 {
-    padding: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 40px;
-}
-
-.brg-image:hover , .brg-image2:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-
-
-
-.image-gallery img:hover {
-    transform: scale(1.02);
-}
-
-/* Thông tin liên hệ */
-footer {
-    background-color: #0077cc;
-    width: 100%;
-    height: 180px; 
-    clear: both;
-    color: white;
-    margin-bottom: 0px;
-    border-top: 2px solid  black;
-    text-align: center;
-    font-size: 25px;
-    line-height: 40px;
-}
-footer a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-footer a:hover {
-    color: #ffdd57;
-    text-decoration: underline;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
 }
