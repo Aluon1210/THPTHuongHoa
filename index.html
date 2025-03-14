@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chúc Mừng Ngày 8/3</title>
+    <title>Sudoku Game</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images.jpg">
 </head>
 <body>
-    <audio id="background-music" loop>
-        <source src="audio.mp3" type="audio/mpeg">
-    </audio>
-
     <div class="container">
-        <h1>💐 Chúc Mừng Ngày Quốc Tế Phụ Nữ 8/3 💐</h1>
-        <p class="message">Chúc các chị em luôn xinh đẹp, hạnh phúc và thành công!</p>
-        <button id="wishButton">💖 Nhận Lời Chúc 🎉</button>
+        <h1>Sudoku Game</h1>
+        <div id="sudoku-board"></div>
+        <div>
+            <label class="char" for="difficulty">Chọn độ khó (số ô cần xóa): </label>
+            <input type="number" id="difficulty" min="1" max="50" value="20">
+            <button onclick="startGame()">Bắt đầu</button>
+        </div>
+        <div id="game-message"></div>
     </div>
-
-    <canvas id="fireworks"></canvas>
-
     <script src="script.js"></script>
 </body>
 </html>
