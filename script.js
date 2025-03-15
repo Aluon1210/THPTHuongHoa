@@ -12,7 +12,7 @@ const initialData = [
 ];
 
 let board = [];
-let difficulty = 20; // Mặc định xóa 20 ô
+let difficulty = 0; // Mặc định xóa 20 ô
 // Hàm khởi tạo trò chơi
 function startGame() {
     difficulty = parseInt(document.getElementById('difficulty').value);
