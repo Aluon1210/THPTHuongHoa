@@ -147,10 +147,24 @@ function addEventListeners() {
 
 // Gọi hàm thêm sự kiện khi DOM đã sẵn sàng
 document.addEventListener('DOMContentLoaded', addEventListeners);
+
 // Hàm hiển thị đáp án
 function showSolution() {
+    const originalBoard = JSON.parse(JSON.stringify(board)); // Lưu lại bảng hiện tại
     board = JSON.parse(JSON.stringify(initialData)); // Sao chép dữ liệu ban đầu
     renderBoard();
+
+    // Đổi màu và font chữ các giá trị được hiển thị
+    const cells = document.querySelectorAll('.sudoku-cell');
+    for (let i = 0; i < 9; i++) {
+        for (let j = 0; j < 9; j++) {
+            if (originalBoard[i][j] === 0 && board[i][j] !== 0) {
+                cells[i * 9 + j].style.color = 'red';
+                cells[i * 9 + j].style.fontWeight = 'bold'; // Thêm font chữ đậm
+            }
+        }
+    }
+
     const message = document.getElementById('game-message');
     message.textContent = 'Đây là đáp án của trò chơi.';
     message.style.color = 'blue'; // color
