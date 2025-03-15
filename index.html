@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="container">
         <h1>Sudoku Game</h1>
         <div id="sudoku-board"></div>
@@ -14,6 +15,7 @@
             <label class="char" for="difficulty">Chọn độ khó (số ô cần xóa): </label>
             <input type="number" id="difficulty" min="1" max="50" value="20">
             <button onclick="startGame()">Bắt đầu</button>
+            <button onclick="showSolution()">Bỏ cuộc</button>
         </div>
         <div id="game-message"></div>
     </div>

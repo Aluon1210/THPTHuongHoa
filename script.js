@@ -17,10 +17,35 @@ let difficulty = 20; // Mặc định xóa 20 ô
 // Hàm khởi tạo trò chơi
 function startGame() {
     difficulty = parseInt(document.getElementById('difficulty').value);
-    board = JSON.parse(JSON.stringify(initialData)); // Sao chép dữ liệu ban đầu
+    board = shuffleBoard(JSON.parse(JSON.stringify(initialData))); // Sao chép và xáo trộn dữ liệu ban đầu
     removeCells(difficulty);
     renderBoard();
     document.getElementById('game-message').textContent = '';
+}
+
+// Hàm xáo trộn bảng Sudoku
+function shuffleBoard(board) {
+    // Hoán đổi các hàng trong mỗi khối 3x3
+    for (let i = 0; i < 9; i += 3) {
+        for (let j = 0; j < 3; j++) {
+            let row1 = i + j;
+            let row2 = i + Math.floor(Math.random() * 3);
+            [board[row1], board[row2]] = [board[row2], board[row1]];
+        }
+    }
+
+    // Hoán đổi các cột trong mỗi khối 3x3
+    for (let i = 0; i < 9; i += 3) {
+        for (let j = 0; j < 3; j++) {
+            let col1 = i + j;
+            let col2 = i + Math.floor(Math.random() * 3);
+            for (let k = 0; k < 9; k++) {
+                [board[k][col1], board[k][col2]] = [board[k][col2], board[k][col1]];
+            }
+        }
+    }
+
+    return board;
 }
 
 // Hàm xóa các ô ngẫu nhiên
@@ -34,6 +59,12 @@ function removeCells(num) {
             removed++;
         }
     }
+}
+
+// Thêm sự kiện cho nút "Bắt đầu" đã có sẵn trong HTML
+const startButton = document.getElementById('start-button');
+if (startButton) {
+    startButton.addEventListener('click', startGame);
 }
 
 // Hàm kiểm tra nếu game đã hoàn thành
@@ -91,9 +122,48 @@ function handleInput(row, col, input) {
     // Kiểm tra nếu game hoàn thành
     if (isGameOver()) {
         document.getElementById('game-message').textContent = '🎉 Chúc mừng bạn đã hoàn thành Sudoku!';
-        document.getElementById('game-message').style.color = 'green';
+        document.getElementById('game-message').style.color = 'red'; // color
+        message.style.position = 'absolute';
+        message.style.top = '39%';
+        message.style.left = '25%';
+        message.style.right = '25%';
+        message.style.transform = 'translate(-50%, -50%)';
+        message.style.fontSize = '2em';
+        message.style.animation = 'fireworks 1s ease-out infinite';
     }
 }
+
+// Hàm hiển thị đáp án
+function showSolution() {
+    board = JSON.parse(JSON.stringify(initialData)); // Sao chép dữ liệu ban đầu
+    renderBoard();
+    const message = document.getElementById('game-message');
+    message.textContent = 'Đây là đáp án của trò chơi.';
+    message.style.color = 'blue'; // color
+    message.style.position = 'absolute';
+    message.style.top = '39%';
+    message.style.left = '25%';
+    message.style.right = '25%';
+    message.style.transform = 'translate(-50%, -50%)';
+    message.style.fontSize = '2em';
+    message.style.animation = 'fireworks 1s ease-out infinite';
+}
+
+// Thêm sự kiện cho nút "Bỏ cuộc" đã có sẵn trong HTML
+const giveUpButton = document.getElementById('give-up-button');
+if (giveUpButton) {
+    giveUpButton.addEventListener('click', showSolution);
+}
+
+// Thêm CSS cho hiệu ứng pháo hoa
+const style = document.createElement('style');
+style.textContent = `
+@keyframes fireworks {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+`;
+document.head.appendChild(style);
 
 // Kiểm tra số nhập vào có hợp lệ không
 function isValid(row, col, num) {
