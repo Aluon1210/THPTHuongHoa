@@ -132,7 +132,21 @@ function handleInput(row, col, input) {
         message.style.animation = 'fireworks 1s ease-out infinite';
     }
 }
+// Hàm kiểm tra trình duyệt và thêm các sự kiện tương thích
+function addEventListeners() {
+    const startButton = document.getElementById('start-button');
+    if (startButton) {
+        startButton.addEventListener('click', startGame);
+    }
 
+    const giveUpButton = document.getElementById('give-up-button');
+    if (giveUpButton) {
+        giveUpButton.addEventListener('click', showSolution);
+    }
+}
+
+// Gọi hàm thêm sự kiện khi DOM đã sẵn sàng
+document.addEventListener('DOMContentLoaded', addEventListeners);
 // Hàm hiển thị đáp án
 function showSolution() {
     board = JSON.parse(JSON.stringify(initialData)); // Sao chép dữ liệu ban đầu
