@@ -13,7 +13,6 @@ const initialData = [
 
 let board = [];
 let difficulty = 20; // Mặc định xóa 20 ô
-
 // Hàm khởi tạo trò chơi
 function startGame() {
     difficulty = parseInt(document.getElementById('difficulty').value);
@@ -132,6 +131,7 @@ function handleInput(row, col, input) {
         message.style.animation = 'fireworks 1s ease-out infinite';
     }
 }
+
 // Hàm kiểm tra trình duyệt và thêm các sự kiện tương thích
 function addEventListeners() {
     const startButton = document.getElementById('start-button');
@@ -150,15 +150,14 @@ document.addEventListener('DOMContentLoaded', addEventListeners);
 
 // Hàm hiển thị đáp án
 function showSolution() {
-    const originalBoard = JSON.parse(JSON.stringify(board)); // Lưu lại bảng hiện tại
-    board = JSON.parse(JSON.stringify(initialData)); // Sao chép dữ liệu ban đầu
     renderBoard();
 
     // Đổi màu và font chữ các giá trị được hiển thị
     const cells = document.querySelectorAll('.sudoku-cell');
     for (let i = 0; i < 9; i++) {
         for (let j = 0; j < 9; j++) {
-            if (originalBoard[i][j] === 0 && board[i][j] !== 0) {
+            if (board[i][j] === 0) {
+                cells[i * 9 + j].textContent = initialData[i][j];
                 cells[i * 9 + j].style.color = 'red';
                 cells[i * 9 + j].style.fontWeight = 'bold'; // Thêm font chữ đậm
             }
