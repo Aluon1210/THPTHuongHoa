@@ -39,13 +39,11 @@ h1 {
     display: grid;
     grid-template-columns: repeat(9, 40px);
     grid-template-rows: repeat(9, 40px);
-    gap: 1px;
+    gap: -1px;
     margin-top: 20px;
 }
 
 .sudoku-cell {
-    width: 40px;
-    height: 40px;
     text-align: center;
     font-size: 1.5em;
     border: 1px solid #ccc;
@@ -87,7 +85,8 @@ h1 {
     height: 30px;
     font-size: 1.2em;
     text-align: center;
-     background-color: transparent;
+    padding: 0px;
+    background-color: transparent;
 }
 
 .sudoku-cell:focus-within {
@@ -102,7 +101,7 @@ h1 {
 input {
     width: 69px;
     height: 30px;
-    border-radius: 7px;
+    border-radius: 2px;
 }
 
 button {
